@@ -5,11 +5,16 @@ Shop-App
 [![Build status of the master branch on Windows](https://img.shields.io/badge/version-1-blue)](https://github.com/MohanedZekry/shop_app)
 ====
 
+## Content
+- Overview [#Overview]
+- Technologies[#Technologies]
+
+## Overview
 E-commerce app contains product page which has a horizontal list of categories then a list of our products. Then on the details page, it shows the price and short description of the product with the Buy Now button. The best part of our E-commerce app is, each product has its own color which looks great.
 
-## Tools
+## Technologies
+- Bloc (https://pub.dev/packages/bloc)
 - Cubit
-- Bloc
 - Retrofit
 - Dio
 - Shared Preferences
