@@ -5,7 +5,7 @@ Shop-App
 [![Build status of the master branch on Windows](https://img.shields.io/badge/version-1-blue)](https://github.com/MohanedZekry/shop_app)
 ====
 
-E-commerce app contains new & awesome technologies in Flutter and test new ideas ..
+<b>E-commerce app contains new & awesome technologies in Flutter and test new ideas ..</b>
 
 ## Content
 - [Overview](#Overview)
