@@ -10,7 +10,7 @@ Shop-App
 ## Content
 - [Overview](#Overview)
 - [Technologies](#Technologies)
-- [Requirements](#✨Requirements)
+- [Requirements](#Requirements)
 
 ## Overview
 E-commerce app contains product page which has a horizontal list of categories then a list of our products. Then on the details page, it shows the price and short description of the product with the Buy Now button. The best part of our E-commerce app is, each product has its own color which looks great.
@@ -25,7 +25,7 @@ E-commerce app contains product page which has a horizontal list of categories t
 - <a href="https://pub.dev/packages/conditional_builder_rec">Conditional Builder</a>
 - Material Design
 - 
-## ✨ Requirements
+## Requirements✨
 - Any Operating System (ie. MacOS X, Linux, Windows)
 - Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
 - A little knowledge of Dart and Flutter
