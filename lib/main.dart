@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/layouts/login_layout.dart';
 import 'package:shop_app/layouts/onboarding_layout.dart';
-import 'package:shop_app/shared/network/remote/dio_helper.dart';
+import 'package:shop_app/shared/network/remote/dio/dio_helper.dart';
 import 'package:shop_app/shared/styles/theme/theme.dart';
 
 void main() {
