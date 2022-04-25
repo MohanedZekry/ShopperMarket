@@ -1,4 +1,4 @@
-part of 'api_client.dart';
+/*part of 'api_client.dart';
 
 Task _$TaskFromJson(Map<String, dynamic> json) => Task(
   id: json['id'] as String,
@@ -958,3 +958,4 @@ class _RestClient implements APIClient {
     return requestOptions;
   }
 }
+*/
