@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shop_app/shared/styles/colors.dart';
 
 Widget mButton({
@@ -49,28 +50,28 @@ Widget mTextForm({
   bool isPassword = false,
   TextInputAction actionButton= TextInputAction.next,
 }) => TextFormField(
-      controller: controller,
-      keyboardType: type,
-      validator: validator,
-      textInputAction: actionButton,
-      /*validator: (value) {
+  controller: controller,
+  keyboardType: type,
+  validator: validator,
+  textInputAction: actionButton,
+  /*validator: (value) {
         if (value != null) {
           return validation;
         }
         return null;
       },*/
-      obscureText: isPassword,
-      decoration: InputDecoration(
-        border: const OutlineInputBorder(),
-        labelText: label,
-        prefixIcon: Icon(
-          prefixIcon,
-        ),
-        suffixIcon: Icon(
-          /* suffixIcon OR */ isPassword? Icons.remove_red_eye : null,
-        ),
-      ),
-    );
+  obscureText: isPassword,
+  decoration: InputDecoration(
+    border: const OutlineInputBorder(),
+    labelText: label,
+    prefixIcon: Icon(
+      prefixIcon,
+    ),
+    suffixIcon: Icon(
+      /* suffixIcon OR */ isPassword? Icons.remove_red_eye : null,
+    ),
+  ),
+);
 
 void hideKeyboard(BuildContext context) => FocusScope.of(context).unfocus();
 
@@ -87,3 +88,42 @@ void navigateAndFinish(context, widget) => Navigator.pushAndRemoveUntil(
       builder: (context) => widget,
     ),
         (Route<dynamic> route) => false);
+
+void showToast({
+  required String message,
+  Toast duration = Toast.LENGTH_SHORT,
+  int durationTime = 3,
+  ToastGravity gravity = ToastGravity.BOTTOM,
+  ToastStates state = ToastStates.SUCCES,
+})
+=> Fluttertoast.showToast(
+    msg: message,
+    toastLength: duration,
+    gravity: gravity,
+    timeInSecForIosWeb: durationTime,
+    backgroundColor: getToastColor(state),
+    textColor: Colors.white,
+    fontSize: 16.0
+);
+
+enum ToastStates {
+  SUCCES, ERROR, WARNING
+}
+
+Color getToastColor(ToastStates state){
+  Color color;
+  switch(state){
+    case ToastStates.SUCCES:
+      color = Colors.green;
+      break;
+
+    case ToastStates.ERROR:
+      color = Colors.red;
+      break;
+
+    case ToastStates.WARNING:
+      color = Colors.amber;
+      break;
+  }
+  return color;
+}

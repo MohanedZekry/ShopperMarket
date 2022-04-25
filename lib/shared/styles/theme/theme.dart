@@ -36,7 +36,7 @@ ThemeData darkTheme = ThemeData(
   ),
   iconTheme: const IconThemeData(
     color: Colors.white,
-  )
+  ),
 );
 ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: backgroundColorLight,

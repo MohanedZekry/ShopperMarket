@@ -36,7 +36,7 @@ class DioHelper {
     required String password,
   }) async {
     String url = "$path/$email/$password";
-    print(url);
+    //print(url);
     return dio.get(url);
   }
 

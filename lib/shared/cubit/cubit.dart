@@ -1,6 +1,7 @@
 import 'package:shop_app/models/user_model.dart';
 import 'package:shop_app/shared/cubit/states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop_app/shared/helper/shared_preferences_helper.dart';
 import 'package:shop_app/shared/network/end_points.dart';
 import 'package:shop_app/shared/network/remote/dio/dio_helper.dart';
 
@@ -40,11 +41,16 @@ class LoginCubit extends Cubit<LoginStates> {
         email: email,
         password: password).then((value)
     {
-      userModel = UserModel.fromJSON(value.data);
-      emit(SuccessLoginState(userModel));
+      if(value.data != null) {
+        userModel = UserModel.fromJSON(value.data);
+        SharedPreferencesHelper.setUserStatus(status: true);
+        emit(SuccessLoginState(userModel));
+      }else{
+        emit(ErrorLoginState("Error in data"));
+      }
     }).catchError((error)
     {
-      emit(ErrorLoginState(error));
+      emit(ErrorLoginState(error.toString()));
     });
   }
 
