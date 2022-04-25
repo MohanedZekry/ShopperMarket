@@ -1,26 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop_app/layouts/home_layout.dart';
 import 'package:shop_app/shared/components/components.dart';
 import 'package:shop_app/shared/cubit/cubit.dart';
 import 'package:shop_app/shared/cubit/states.dart';
 import 'package:shop_app/shared/styles/colors.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
+import 'package:shop_app/shared/utils/constants.dart';
+import 'package:toast/toast.dart';
 
 class LoginLayout extends StatelessWidget {
-  LoginLayout({Key? key}) : super(key: key);
-
-  var formKey = GlobalKey<FormState>();
+  const LoginLayout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
+    ToastContext().init(context);
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
+    var formKey = GlobalKey<FormState>();
 
     return BlocProvider(
       create: (context) => LoginCubit(),
       child: BlocConsumer<LoginCubit, LoginStates>(
-        listener: (context, state) {},
+        listener: (context, state) {
+          if(state is SuccessLoginState){
+            showToast("Login Successful", duration: Toast.lengthLong, gravity: Toast.bottom);
+            navigateAndFinish(context, HomeLayout());
+          }
+          else if(state is ErrorLoginState){
+            showToast("Login Failure", duration: Toast.lengthLong, gravity: Toast.bottom);
+          }
+        },
         builder: (context, state) {
           return Scaffold(
             appBar: AppBar(),
