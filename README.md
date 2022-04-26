@@ -11,6 +11,8 @@ Shop-App 🛒
 - [Overview](#Overview)
 - [Technologies](#Technologies)
 - [Requirements](#Requirements)
+- [Available Layouts](#Available Layouts)
+
 
 ## Overview 📙
 E-commerce app contains product page which has a horizontal list of categories then a list of our products. Then on the details page, it shows the price and short description of the product with the Buy Now button. The best part of our E-commerce app is, each product has its own color which looks great.
@@ -25,6 +27,18 @@ E-commerce app contains product page which has a horizontal list of categories t
 - <a href="https://pub.dev/packages/conditional_builder_rec">Conditional Builder</a>
 - <a href="https://pub.dev/packages/material">Material Design</a>
 
+## Available Layouts
+
+| Layout             |               Currently Available                |
+| :----------------- | :----------------------------------------------: |
+| OnBoarding         |                      Done                        |
+| Login              |                      Done                        |
+| Register           |                      Done                        |
+| Home               |                      Done                        |
+| Products           |                      Done                        |
+| Categories         |                      Done                        |
+| Search             |                Under Development                 |
+| Payment            |                Under Development                 |
 
 ## Requirements✨
 - Any Operating System (ie. MacOS X, Linux, Windows)
