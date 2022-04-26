@@ -42,7 +42,8 @@ E-commerce app contains product page which has a horizontal list of categories t
 
 # Screenshots
 
-<img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968096.png">
+<img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968096.png"><img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968538.png"><img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968542.png">
+
 
 
 ## Requirements✨
