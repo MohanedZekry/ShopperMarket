@@ -11,7 +11,7 @@ Shop-App 🛒
 - [Overview](#Overview)
 - [Technologies](#Technologies)
 - [Requirements](#Requirements)
-- [Available Layouts](#Available Layouts)
+- [AvailableLayouts](#AvailableLayouts)
 
 
 ## Overview 📙
