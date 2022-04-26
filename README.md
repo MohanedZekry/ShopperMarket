@@ -11,7 +11,7 @@ Shop-App 🛒
 - [Overview](#Overview)
 - [Technologies](#Technologies)
 - [Requirements](#Requirements)
-- [AvailableLayouts](#AvailableLayouts)
+- [Available_Layouts](#Available_Layouts)
 
 
 ## Overview 📙
@@ -27,7 +27,7 @@ E-commerce app contains product page which has a horizontal list of categories t
 - <a href="https://pub.dev/packages/conditional_builder_rec">Conditional Builder</a>
 - <a href="https://pub.dev/packages/material">Material Design</a>
 
-## Available Layouts
+## Available_Layouts
 
 | Layout             |               Currently Available                |
 | :----------------- | :----------------------------------------------: |
