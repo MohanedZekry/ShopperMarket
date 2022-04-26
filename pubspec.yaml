@@ -38,6 +38,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   conditional_builder_null_safety: ^0.0.6
   fluttertoast: ^8.0.9 #toast: ^0.3.0
+  carousel_slider: ^4.1.1
 
   # Local Storage #
   shared_preferences: ^2.0.13

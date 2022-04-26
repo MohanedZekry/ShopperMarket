@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/layouts/login_layout.dart';
-import 'package:shop_app/layouts/onboarding_layout.dart';
+import 'package:shop_app/layouts/home/home_layout.dart';
+import 'package:shop_app/layouts/login/login_layout.dart';
+import 'package:shop_app/layouts/onboarding/onboarding_layout.dart';
 import 'package:shop_app/shared/helper/shared_preferences_helper.dart';
 import 'package:shop_app/shared/network/remote/dio/dio_helper.dart';
+import 'package:shop_app/shared/network/remote/dio/dio_shop_helper.dart';
 import 'package:shop_app/shared/styles/theme/theme.dart';
 
 void main() async {
@@ -10,7 +12,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   DioHelper.init();
-
+  DioShopHelper.init();
   await SharedPreferencesHelper.init();
   bool onBoarding = SharedPreferencesHelper.isUserSigned();
 
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
-      home: onBoarding? LoginLayout() : OnBoardingLayout(),
+      home: HomeLayout(),
     );
   }
 }

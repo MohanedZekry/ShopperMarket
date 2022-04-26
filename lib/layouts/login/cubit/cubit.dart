@@ -1,5 +1,5 @@
+import 'package:shop_app/layouts/login/cubit/states.dart';
 import 'package:shop_app/models/user_model.dart';
-import 'package:shop_app/shared/cubit/states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/shared/helper/shared_preferences_helper.dart';
 import 'package:shop_app/shared/network/end_points.dart';
@@ -12,6 +12,7 @@ class LoginCubit extends Cubit<LoginStates> {
   static LoginCubit getInstance(context) => BlocProvider.of(context);
 
   late UserModel userModel;
+
   /*void userLogin({
     required String email,
     required String password}){

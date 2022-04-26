@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop_app/layouts/home_layout.dart';
+import 'package:shop_app/layouts/home/home_layout.dart';
 import 'package:shop_app/shared/components/components.dart';
-import 'package:shop_app/shared/cubit/cubit.dart';
-import 'package:shop_app/shared/cubit/states.dart';
+import 'package:shop_app/layouts/login/cubit/cubit.dart';
 import 'package:shop_app/shared/styles/colors.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
+import 'cubit/states.dart';
 
 class LoginLayout extends StatelessWidget {
   const LoginLayout({Key? key}) : super(key: key);

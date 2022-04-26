@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:shop_app/layouts/login_layout.dart';
+import 'package:shop_app/layouts/login/login_layout.dart';
 import 'package:shop_app/shared/components/components.dart';
 import 'package:shop_app/shared/styles/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+/* MODEL FOR PAGER */
 class BoardingModel{
   late String title;
   late String description;

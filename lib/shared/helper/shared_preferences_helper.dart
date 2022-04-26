@@ -27,7 +27,7 @@ class SharedPreferencesHelper {
   }
 
   static bool isUserSigned(){
-      return sharedPreferences.getBool(Constants.SIGN_IN_KEY)?? false;
+    return sharedPreferences.getBool(Constants.SIGN_IN_KEY)?? false;
   }
 
   static Future<bool> setUserStatus(
@@ -35,6 +35,14 @@ class SharedPreferencesHelper {
         required bool status }) async
   {
     return await sharedPreferences.setBool(Constants.SIGN_IN_KEY, status);
+  }
+
+  static Future<bool> removeData(
+      {
+        required String key,
+      }) async
+  {
+    return await sharedPreferences.remove(key);
   }
 
 }
