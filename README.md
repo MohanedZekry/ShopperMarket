@@ -40,6 +40,11 @@ E-commerce app contains product page which has a horizontal list of categories t
 | Search             |                Under Development                 |
 | Payment            |                Under Development                 |
 
+# Screenshots
+
+<img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968096.png">
+
+
 ## Requirements✨
 - Any Operating System (ie. MacOS X, Linux, Windows)
 - Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
