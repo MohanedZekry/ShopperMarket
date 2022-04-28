@@ -1,5 +1,6 @@
-<img width="250px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/full_logo.png"> 🛒
-&middot;
+<img width="250px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/full_logo.png"> 
+
+🛒 &middot;
 [![Latest Github release](https://img.shields.io/badge/release-v1-green)](https://github.com/MohanedZekry/shop_app)
 [![Build status of the master branch on Linux/OSX](https://img.shields.io/badge/iOS%2FAndroid-available-brightgreen)](https://github.com/MohanedZekry/shop_app)
 [![Build status of the master branch on Windows](https://img.shields.io/badge/version-1-blue)](https://github.com/MohanedZekry/shop_app)
