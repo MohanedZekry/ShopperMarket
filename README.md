@@ -1,9 +1,11 @@
-Shop-App 🛒
-&middot;
+<p align="center"><img width="250px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/full_logo.png"></p>
+
+🛒 &middot;
 [![Latest Github release](https://img.shields.io/badge/release-v1-green)](https://github.com/MohanedZekry/shop_app)
 [![Build status of the master branch on Linux/OSX](https://img.shields.io/badge/iOS%2FAndroid-available-brightgreen)](https://github.com/MohanedZekry/shop_app)
 [![Build status of the master branch on Windows](https://img.shields.io/badge/version-1-blue)](https://github.com/MohanedZekry/shop_app)
 ====
+
 
 <b>E-commerce app contains new & awesome technologies in Flutter and test new ideas ..</b>
 
@@ -42,8 +44,7 @@ E-commerce app contains product page which has a horizontal list of categories t
 
 # Screenshots
 
-<img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968538.png"> <img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968542.png"> <img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968096.png"> 
-
+<img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1650968538.png"> <img height="480px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/Screenshot_1651072080.png"> <img height="480px" src="https://github.com/MohanedZekry/ShopperMarket/blob/flutter_branch/screenshots/Screenshot_1651117205.png"> <img height="480px" src="https://github.com/MohanedZekry/ShopperMarket/blob/flutter_branch/screenshots/Screenshot_1651117224.png">
 
 
 ## Requirements✨
