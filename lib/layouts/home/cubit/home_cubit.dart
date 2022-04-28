@@ -5,7 +5,8 @@ import 'package:shop_app/layouts/home/screens/categories/categories_screen.dart'
 import 'package:shop_app/layouts/home/screens/favorites/favorites_screen.dart';
 import 'package:shop_app/layouts/home/screens/products/products_screen.dart';
 import 'package:shop_app/layouts/home/screens/settings/settings_screen.dart';
-import 'package:shop_app/models/HomeModel.dart';
+import 'package:shop_app/models/categories_model.dart';
+import 'package:shop_app/models/home_model.dart';
 import 'package:shop_app/shared/network/end_points.dart';
 import 'package:shop_app/shared/network/remote/dio/dio_shop_helper.dart';
 
@@ -37,6 +38,8 @@ class HomeCubit extends Cubit<HomeStates>{
 
   HomeModel? homeModel;
 
+  CategoriesModel? categoriesModel;
+
   void getHomeData(){
     emit(LoadingHomeDataState());
     DioShopHelper.getData(url: EP_HOME).then((value) {
@@ -48,6 +51,24 @@ class HomeCubit extends Cubit<HomeStates>{
       }
     }).catchError((error){
       emit(ErrorHomeDataState(error));
+    });
+  }
+
+  void getCategoriesData(){
+    print('here');
+
+    DioShopHelper.getData(url: EP_CATEGORIES)
+        .then((value) {
+      if(value.data != null) {
+        categoriesModel = CategoriesModel.fromJson(value.data);
+        print(categoriesModel!.data.currentPage);
+        emit(SuccessCategoriesDataState());
+      }else{
+        emit(ErrorCategoriesDataState('There\'s unusual error happened.'));
+      }
+    }).catchError((error){
+      print(error.toString());
+      emit(ErrorCategoriesDataState(error.toString()));
     });
   }
 }

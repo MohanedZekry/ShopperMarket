@@ -50,15 +50,19 @@ class LoginLayout extends StatelessWidget {
                     child: Form(
                       key: formKey,
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          /*Text(
                             'SHOP-APP',
                             style: TextStyle(
                               color: primarySwatchColor,
                               fontSize: 25.0,
                               fontWeight: FontWeight.bold,
                             ),
+                          ),*/
+                          Image.asset(
+                            'assets/images/logo.png',
+                            width: 200,
+                            fit: BoxFit.fitWidth,
                           ),
                           const SizedBox(height: 20.0,),
                           mTextForm(

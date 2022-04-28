@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/layouts/home/cubit/home_cubit.dart';
 import 'package:shop_app/layouts/home/cubit/home_states.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:shop_app/models/HomeModel.dart';
+import 'package:shop_app/models/categories_model.dart';
+import 'package:shop_app/models/home_model.dart';
 import 'package:shop_app/shared/styles/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -18,7 +19,7 @@ class ProductScreen extends StatelessWidget {
         builder: (context, state){
           var mCubit = HomeCubit.getInstance(context);
           return ConditionalBuilder(
-              condition: mCubit.homeModel != null,
+              condition: mCubit.homeModel != null && mCubit.categoriesModel != null,
               builder: (context) => productBuilder(mCubit.homeModel, mCubit),
               fallback: (context) => Center(child:  CircularProgressIndicator()));
         }
@@ -30,6 +31,7 @@ class ProductScreen extends StatelessWidget {
   => SingleChildScrollView(
     physics: const BouncingScrollPhysics(),
     child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           padding: EdgeInsets.symmetric(horizontal: 12.0),
@@ -80,6 +82,41 @@ class ProductScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8.0,),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Categories',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 8.0,),
+              Container(
+                height: 100,
+                child: ListView.separated(
+                  itemCount: mCubit.categoriesModel!.data.data.length,
+                  itemBuilder: (context, index) => categoriesItemBuilder(mCubit.categoriesModel!.data.data[index]),
+                  separatorBuilder: (context, index) => const SizedBox(width: 4.0,),
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                ),
+              ),
+              const Text(
+                'Popular Items',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
+        ),
         Container(
           color: Colors.white,
           child: Padding(
@@ -187,4 +224,34 @@ class ProductScreen extends StatelessWidget {
       ],
     ),
   );
+
+  Widget categoriesItemBuilder(CategoriesInnerDataModel model)
+  => Padding(
+    padding: EdgeInsets.symmetric(horizontal: 12.0),
+    child: Column(
+      children: [
+        Container(
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              image:  NetworkImage(model.image),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Text(
+          model.name,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: secondaryColor,
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+  );
+
 }

@@ -12,14 +12,18 @@ class HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return BlocProvider(
-      create: (context) => HomeCubit()..getHomeData(),
+      create: (context) => HomeCubit()..getHomeData()..getCategoriesData(),
       child: BlocConsumer<HomeCubit, HomeStates>(
         listener: (context, state) {},
         builder: (context, state) {
           HomeCubit mCubit = HomeCubit.getInstance(context);
           return Scaffold(
             appBar: AppBar(
-              title: Text('ShopApp'),
+              title: Image.asset(
+                'assets/images/logo.png',
+                width: 70.0,
+                fit: BoxFit.fitWidth,
+              ),
               actions: [
                 IconButton(
                   icon: Icon(Icons.search),
