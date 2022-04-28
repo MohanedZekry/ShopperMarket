@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/layouts/home/home_layout.dart';
 import 'package:shop_app/layouts/login/login_layout.dart';
 import 'package:shop_app/layouts/onboarding/onboarding_layout.dart';
+import 'package:shop_app/layouts/profile/profile_layout.dart';
 import 'package:shop_app/shared/helper/shared_preferences_helper.dart';
 import 'package:shop_app/shared/network/remote/dio/dio_helper.dart';
 import 'package:shop_app/shared/network/remote/dio/dio_shop_helper.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
-      home: onBoarding? HomeLayout() : OnBoardingLayout(),
+      home: onBoarding? const HomeLayout() : const OnBoardingLayout(),
     );
   }
 }

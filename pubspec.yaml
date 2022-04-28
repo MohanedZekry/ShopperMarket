@@ -63,12 +63,6 @@ flutter:
   assets:
      - assets/images/
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
   fonts:
     - family: TheSans
       fonts:
@@ -77,3 +71,6 @@ flutter:
         - asset: assets/fonts/the_sans_bold.otf
         - asset : assets/fonts/the_sans_black.otf
 
+    - family: NiseFont
+      fonts:
+          - asset : assets/fonts/nisebuschgardens.ttf

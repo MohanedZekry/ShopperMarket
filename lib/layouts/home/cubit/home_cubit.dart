@@ -20,10 +20,10 @@ class HomeCubit extends Cubit<HomeStates>{
   int bannerIndex = 0;
 
   List<Widget> bottomWidgets = [
-    ProductScreen(),
-    CategoryScreen(),
-    FavoriteScreen(),
-    SettingScreen(),
+    const ProductScreen(),
+    const CategoryScreen(),
+    const FavoriteScreen(),
+    const SettingScreen(),
   ];
 
   void changeBottomNavIndex(int _index){
