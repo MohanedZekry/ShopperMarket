@@ -1,4 +1,4 @@
-<img width="250px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/full_logo.png"> 
+<img width="200px" src="https://github.com/MohanedZekry/shop_app/blob/flutter_branch/screenshots/full_logo.png"> 
 
 🛒 &middot;
 [![Latest Github release](https://img.shields.io/badge/release-v1-green)](https://github.com/MohanedZekry/shop_app)
