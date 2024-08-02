@@ -1,18 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/layouts/login_layout.dart';
-import 'package:shop_app/layouts/onboarding_layout.dart';
-import 'package:shop_app/shared/network/remote/dio_helper.dart';
+import 'package:shop_app/layouts/home/home_layout.dart';
+import 'package:shop_app/layouts/login/login_layout.dart';
+import 'package:shop_app/layouts/onboarding/onboarding_layout.dart';
+import 'package:shop_app/layouts/profile/profile_layout.dart';
+import 'package:shop_app/shared/helper/shared_preferences_helper.dart';
+import 'package:shop_app/shared/network/remote/dio/dio_helper.dart';
+import 'package:shop_app/shared/network/remote/dio/dio_shop_helper.dart';
 import 'package:shop_app/shared/styles/theme/theme.dart';
 
-void main() {
+void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
 
   DioHelper.init();
-  runApp(const MyApp());
+  DioShopHelper.init();
+  await SharedPreferencesHelper.init();
+  bool onBoarding = SharedPreferencesHelper.isUserSigned();
+
+  runApp(MyApp(onBoarding: onBoarding,));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+
+  final bool onBoarding;
+
+  const MyApp({
+    Key? key,
+    required this.onBoarding,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
-      home: LoginLayout(),
+      home: onBoarding? const HomeLayout() : const OnBoardingLayout(),
     );
   }
 }

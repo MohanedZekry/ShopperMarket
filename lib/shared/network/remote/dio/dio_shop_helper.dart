@@ -1,43 +1,27 @@
 import 'package:dio/dio.dart';
 
-class DioHelper {
+class DioShopHelper {
   static late Dio dio;
 
   static init(){
     dio = Dio(
       BaseOptions(
-        baseUrl: "https://addmission.must.edu.eg/OperaAPI/api/",
-        receiveDataWhenStatusError: true,
-        headers: {
-          'Content-Type' :'application/json',
-        }
-      ),
-        /*BaseOptions(
           baseUrl: "https://student.valuxapps.com/api/",
           receiveDataWhenStatusError: true,
           headers: {
             'Content-Type' :'application/json',
-            'lang' : 'ar',
+            'lang' : 'en',
+            'Authorization' : 'b676yF4HQTAGtP9bYNM2kjAw3VZ6vd63Ar7dr7jQvhISokVKIK5K3Emr4tiPctOBgBlZhV'
           },
-        )*/
+        ),
     );
   }
 
   static Future<Response> getData({
     required String url,
-    required Map<String, dynamic> query }) async
+    Map<String, dynamic>? query }) async
   {
     return await dio.get(url, queryParameters: query);
-  }
-
-  static Future<Response> login({
-    required String path,
-    required String email,
-    required String password,
-  }) async {
-    String url = "$path/$email/$password";
-    print(url);
-    return dio.get(url);
   }
 
   static Future<Response> postData({
@@ -45,11 +29,6 @@ class DioHelper {
     required Map<String, dynamic> data,
     Map<String, dynamic>? query,
   }) async {
-    /*dio.options = BaseOptions(
-        headers: {
-          'lang': 'ar',
-        }
-    );*/
     return await dio.post(
         path,
         data: data,

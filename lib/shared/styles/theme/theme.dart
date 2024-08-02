@@ -8,18 +8,21 @@ ThemeData darkTheme = ThemeData(
   fontFamily: "TheSans",
   primarySwatch: Colors.blue,
   appBarTheme: AppBarTheme(
-    elevation: 0.0,
-    backgroundColor: darkModeColor,
-    backwardsCompatibility: false,
-    titleTextStyle: const TextStyle(
-      color: Colors.white,
-      fontSize: Dimens.sTitle,
-      fontWeight: FontWeight.bold,
-    ),
-    systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: darkModeColor,
-      statusBarIconBrightness: Brightness.light,
-    )
+      elevation: 0.0,
+      iconTheme: IconThemeData(
+          color: Colors.white
+      ),
+      backgroundColor: darkModeColor,
+      backwardsCompatibility: false,
+      titleTextStyle: const TextStyle(
+        color: Colors.white,
+        fontSize: Dimens.sTitle,
+        fontWeight: FontWeight.bold,
+      ),
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: darkModeColor,
+        statusBarIconBrightness: Brightness.light,
+      )
   ),
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: backgroundColorDark,
@@ -29,14 +32,14 @@ ThemeData darkTheme = ThemeData(
     elevation: 20.0,
   ),
   textTheme: const TextTheme(
-    bodyText1: TextStyle(
-      color: Colors.white,
-      fontSize: Dimens.sBody1,
-    )
+      bodyText1: TextStyle(
+        color: Colors.white,
+        fontSize: Dimens.sBody1,
+      )
   ),
   iconTheme: const IconThemeData(
     color: Colors.white,
-  )
+  ),
 );
 ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: backgroundColorLight,
@@ -44,6 +47,9 @@ ThemeData lightTheme = ThemeData(
     fontFamily: "TheSans",
     appBarTheme: const AppBarTheme(
         elevation: 0.0,
+        iconTheme: IconThemeData(
+            color: Colors.black
+        ),
         backgroundColor: Colors.white,
         backwardsCompatibility: false,
         titleTextStyle: TextStyle(
